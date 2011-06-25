@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70D275CE13B66951008A644C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D275CD13B66951008A644C /* UIKit.framework */; };
+		70D275D013B66951008A644C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D275CF13B66951008A644C /* Foundation.framework */; };
+		70D275D213B66951008A644C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D275D113B66951008A644C /* CoreGraphics.framework */; };
+		70D275D813B66951008A644C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70D275D613B66951008A644C /* InfoPlist.strings */; };
+		70D275DB13B66951008A644C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D275DA13B66951008A644C /* main.m */; };
+		70D275DE13B66951008A644C /* SequencerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D275DD13B66951008A644C /* SequencerAppDelegate.m */; };
+		70D275E113B66951008A644C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D275DF13B66951008A644C /* MainWindow.xib */; };
+		70D275E813B66951008A644C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D275CD13B66951008A644C /* UIKit.framework */; };
+		70D275E913B66951008A644C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D275CF13B66951008A644C /* Foundation.framework */; };
+		70D275EA13B66951008A644C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D275D113B66951008A644C /* CoreGraphics.framework */; };
+		70D275F213B66951008A644C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70D275F013B66951008A644C /* InfoPlist.strings */; };
+		70D275F513B66951008A644C /* SequencerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 70D275F413B66951008A644C /* SequencerTests.h */; };
+		70D275F713B66951008A644C /* SequencerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D275F613B66951008A644C /* SequencerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70D275EB13B66951008A644C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70D275C013B66951008A644C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70D275C813B66951008A644C;
+			remoteInfo = Sequencer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70D275C913B66951008A644C /* Sequencer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sequencer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70D275CD13B66951008A644C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		70D275CF13B66951008A644C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70D275D113B66951008A644C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		70D275D513B66951008A644C /* Sequencer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sequencer-Info.plist"; sourceTree = "<group>"; };
+		70D275D713B66951008A644C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		70D275D913B66951008A644C /* Sequencer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sequencer-Prefix.pch"; sourceTree = "<group>"; };
+		70D275DA13B66951008A644C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		70D275DC13B66951008A644C /* SequencerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequencerAppDelegate.h; sourceTree = "<group>"; };
+		70D275DD13B66951008A644C /* SequencerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequencerAppDelegate.m; sourceTree = "<group>"; };
+		70D275E013B66951008A644C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		70D275E713B66951008A644C /* SequencerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequencerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70D275EF13B66951008A644C /* SequencerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SequencerTests-Info.plist"; sourceTree = "<group>"; };
+		70D275F113B66951008A644C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		70D275F313B66951008A644C /* SequencerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SequencerTests-Prefix.pch"; sourceTree = "<group>"; };
+		70D275F413B66951008A644C /* SequencerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequencerTests.h; sourceTree = "<group>"; };
+		70D275F613B66951008A644C /* SequencerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequencerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70D275C613B66951008A644C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D275CE13B66951008A644C /* UIKit.framework in Frameworks */,
+				70D275D013B66951008A644C /* Foundation.framework in Frameworks */,
+				70D275D213B66951008A644C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70D275E313B66951008A644C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D275E813B66951008A644C /* UIKit.framework in Frameworks */,
+				70D275E913B66951008A644C /* Foundation.framework in Frameworks */,
+				70D275EA13B66951008A644C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70D275BE13B66951008A644C = {
+			isa = PBXGroup;
+			children = (
+				70D275D313B66951008A644C /* Sequencer */,
+				70D275ED13B66951008A644C /* SequencerTests */,
+				70D275CC13B66951008A644C /* Frameworks */,
+				70D275CA13B66951008A644C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70D275CA13B66951008A644C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70D275C913B66951008A644C /* Sequencer.app */,
+				70D275E713B66951008A644C /* SequencerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70D275CC13B66951008A644C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70D275CD13B66951008A644C /* UIKit.framework */,
+				70D275CF13B66951008A644C /* Foundation.framework */,
+				70D275D113B66951008A644C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70D275D313B66951008A644C /* Sequencer */ = {
+			isa = PBXGroup;
+			children = (
+				70D2760013B669C4008A644C /* Sequencer */,
+				70D275DC13B66951008A644C /* SequencerAppDelegate.h */,
+				70D275DD13B66951008A644C /* SequencerAppDelegate.m */,
+				70D275DF13B66951008A644C /* MainWindow.xib */,
+				70D275D413B66951008A644C /* Supporting Files */,
+			);
+			path = Sequencer;
+			sourceTree = "<group>";
+		};
+		70D275D413B66951008A644C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70D275D513B66951008A644C /* Sequencer-Info.plist */,
+				70D275D613B66951008A644C /* InfoPlist.strings */,
+				70D275D913B66951008A644C /* Sequencer-Prefix.pch */,
+				70D275DA13B66951008A644C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70D275ED13B66951008A644C /* SequencerTests */ = {
+			isa = PBXGroup;
+			children = (
+				70D275F413B66951008A644C /* SequencerTests.h */,
+				70D275F613B66951008A644C /* SequencerTests.m */,
+				70D275EE13B66951008A644C /* Supporting Files */,
+			);
+			path = SequencerTests;
+			sourceTree = "<group>";
+		};
+		70D275EE13B66951008A644C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70D275EF13B66951008A644C /* SequencerTests-Info.plist */,
+				70D275F013B66951008A644C /* InfoPlist.strings */,
+				70D275F313B66951008A644C /* SequencerTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70D2760013B669C4008A644C /* Sequencer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sequencer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70D275C813B66951008A644C /* Sequencer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70D275FA13B66951008A644C /* Build configuration list for PBXNativeTarget "Sequencer" */;
+			buildPhases = (
+				70D275C513B66951008A644C /* Sources */,
+				70D275C613B66951008A644C /* Frameworks */,
+				70D275C713B66951008A644C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sequencer;
+			productName = Sequencer;
+			productReference = 70D275C913B66951008A644C /* Sequencer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70D275E613B66951008A644C /* SequencerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70D275FD13B66951008A644C /* Build configuration list for PBXNativeTarget "SequencerTests" */;
+			buildPhases = (
+				70D275E213B66951008A644C /* Sources */,
+				70D275E313B66951008A644C /* Frameworks */,
+				70D275E413B66951008A644C /* Resources */,
+				70D275E513B66951008A644C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70D275EC13B66951008A644C /* PBXTargetDependency */,
+			);
+			name = SequencerTests;
+			productName = SequencerTests;
+			productReference = 70D275E713B66951008A644C /* SequencerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70D275C013B66951008A644C /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 70D275C313B66951008A644C /* Build configuration list for PBXProject "Sequencer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70D275BE13B66951008A644C;
+			productRefGroup = 70D275CA13B66951008A644C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70D275C813B66951008A644C /* Sequencer */,
+				70D275E613B66951008A644C /* SequencerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70D275C713B66951008A644C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D275D813B66951008A644C /* InfoPlist.strings in Resources */,
+				70D275E113B66951008A644C /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70D275E413B66951008A644C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D275F213B66951008A644C /* InfoPlist.strings in Resources */,
+				70D275F513B66951008A644C /* SequencerTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70D275E513B66951008A644C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70D275C513B66951008A644C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D275DB13B66951008A644C /* main.m in Sources */,
+				70D275DE13B66951008A644C /* SequencerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70D275E213B66951008A644C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D275F713B66951008A644C /* SequencerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70D275EC13B66951008A644C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70D275C813B66951008A644C /* Sequencer */;
+			targetProxy = 70D275EB13B66951008A644C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70D275D613B66951008A644C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70D275D713B66951008A644C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		70D275DF13B66951008A644C /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70D275E013B66951008A644C /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		70D275F013B66951008A644C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70D275F113B66951008A644C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70D275F813B66951008A644C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		70D275F913B66951008A644C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		70D275FB13B66951008A644C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sequencer/Sequencer-Prefix.pch";
+				INFOPLIST_FILE = "Sequencer/Sequencer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		70D275FC13B66951008A644C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sequencer/Sequencer-Prefix.pch";
+				INFOPLIST_FILE = "Sequencer/Sequencer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		70D275FE13B66951008A644C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sequencer.app/Sequencer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SequencerTests/SequencerTests-Prefix.pch";
+				INFOPLIST_FILE = "SequencerTests/SequencerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		70D275FF13B66951008A644C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sequencer.app/Sequencer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SequencerTests/SequencerTests-Prefix.pch";
+				INFOPLIST_FILE = "SequencerTests/SequencerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70D275C313B66951008A644C /* Build configuration list for PBXProject "Sequencer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70D275F813B66951008A644C /* Debug */,
+				70D275F913B66951008A644C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70D275FA13B66951008A644C /* Build configuration list for PBXNativeTarget "Sequencer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70D275FB13B66951008A644C /* Debug */,
+				70D275FC13B66951008A644C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70D275FD13B66951008A644C /* Build configuration list for PBXNativeTarget "SequencerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70D275FE13B66951008A644C /* Debug */,
+				70D275FF13B66951008A644C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70D275C013B66951008A644C /* Project object */;
+}
