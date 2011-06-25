@@ -22,6 +22,8 @@
 		70D275F713B66951008A644C /* SequencerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D275F613B66951008A644C /* SequencerTests.m */; };
 		70D2760313B66DB4008A644C /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D2760213B66DB4008A644C /* Sequencer.m */; };
 		70D2760413B66DB4008A644C /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D2760213B66DB4008A644C /* Sequencer.m */; };
+		70D2760713B674FE008A644C /* SequencerEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D2760613B674FE008A644C /* SequencerEntry.m */; };
+		70D2760813B674FF008A644C /* SequencerEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D2760613B674FE008A644C /* SequencerEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		70D275F613B66951008A644C /* SequencerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequencerTests.m; sourceTree = "<group>"; };
 		70D2760113B66DB4008A644C /* Sequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sequencer.h; path = sequencer/Sequencer.h; sourceTree = "<group>"; };
 		70D2760213B66DB4008A644C /* Sequencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sequencer.m; path = sequencer/Sequencer.m; sourceTree = "<group>"; };
+		70D2760513B674FE008A644C /* SequencerEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SequencerEntry.h; path = sequencer/SequencerEntry.h; sourceTree = "<group>"; };
+		70D2760613B674FE008A644C /* SequencerEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SequencerEntry.m; path = sequencer/SequencerEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 			children = (
 				70D2760113B66DB4008A644C /* Sequencer.h */,
 				70D2760213B66DB4008A644C /* Sequencer.m */,
+				70D2760513B674FE008A644C /* SequencerEntry.h */,
+				70D2760613B674FE008A644C /* SequencerEntry.m */,
 			);
 			name = Sequencer;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 				70D275DB13B66951008A644C /* main.m in Sources */,
 				70D275DE13B66951008A644C /* SequencerAppDelegate.m in Sources */,
 				70D2760313B66DB4008A644C /* Sequencer.m in Sources */,
+				70D2760713B674FE008A644C /* SequencerEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +287,7 @@
 			files = (
 				70D275F713B66951008A644C /* SequencerTests.m in Sources */,
 				70D2760413B66DB4008A644C /* Sequencer.m in Sources */,
+				70D2760813B674FF008A644C /* SequencerEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

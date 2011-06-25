@@ -10,10 +10,10 @@
 
 
 @interface Sequencer : NSObject {
-    
+    NSMutableSet * entries_;
 }
 @property (nonatomic, readonly) int numUnresolvedDependencies;
 
-- (void)addTarget:(id)target action:(SEL)action dependencies:(int)dependancy1,...;
+- (void)addTarget:(id)target action:(SEL)action dependencies:(int)dependancy1,... NS_REQUIRES_NIL_TERMINATION;
 
 @end

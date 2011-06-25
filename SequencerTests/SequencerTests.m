@@ -38,6 +38,8 @@ typedef enum {
 	Sequencer * sequencer = [[Sequencer alloc] init];
 	[sequencer addTarget:self action:@selector(allStepsComplete) dependencies:LS1, LS3, LS5, nil];
 	STAssertEquals(sequencer.numUnresolvedDependencies, 1, @"Has correct number of unresolved dependancies left");
+	[sequencer addTarget:self action:@selector(allStepsComplete2) dependencies:LS2, LS3, nil];
+	STAssertEquals(sequencer.numUnresolvedDependencies, 2, @"Has correct unresolved Dependencies");
 	
 	
 	[sequencer release];

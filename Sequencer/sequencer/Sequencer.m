@@ -7,18 +7,44 @@
 //
 
 #import "Sequencer.h"
-
+#import "SequencerEntry.h"
 
 @implementation Sequencer
 @dynamic numUnresolvedDependencies;
+
+- (id)init
+{
+	if((self = [super init]))
+	{
+		entries_ = [[NSMutableSet alloc] init];
+	}
+	return self;
+}
+
+- (void)dealloc
+{
+	[entries_ release], entries_ = nil;
+	[super dealloc];
+}
+
 - (void)addTarget:(id)target action:(SEL)action dependencies:(int)dependancy1,...
 {
+	va_list dependencies;
+	va_start(dependencies, dependancy1);
+	NSMutableSet * dependencySet = [NSMutableSet setWithCapacity:10];
+	for (int dependency = dependancy1; dependency != 0; dependency = va_arg(dependencies, int)) {
+		[dependencySet addObject:[NSNumber numberWithInt:dependency]];
+	}
+	va_end(dependencies);
 	
+	SequencerEntry * newEntry = [[SequencerEntry alloc] initWithTarget:target action:action dependencies:dependencySet];
+	[entries_ addObject:newEntry];
+	[newEntry release];
 }
 
 - (int)numUnresolvedDependencies
 {
-	return 0;
+	return entries_.count;
 }
 
 @end
