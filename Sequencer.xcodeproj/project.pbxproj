@@ -20,6 +20,8 @@
 		70D275F213B66951008A644C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70D275F013B66951008A644C /* InfoPlist.strings */; };
 		70D275F513B66951008A644C /* SequencerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 70D275F413B66951008A644C /* SequencerTests.h */; };
 		70D275F713B66951008A644C /* SequencerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D275F613B66951008A644C /* SequencerTests.m */; };
+		70D2760313B66DB4008A644C /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D2760213B66DB4008A644C /* Sequencer.m */; };
+		70D2760413B66DB4008A644C /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D2760213B66DB4008A644C /* Sequencer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		70D275F313B66951008A644C /* SequencerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SequencerTests-Prefix.pch"; sourceTree = "<group>"; };
 		70D275F413B66951008A644C /* SequencerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequencerTests.h; sourceTree = "<group>"; };
 		70D275F613B66951008A644C /* SequencerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequencerTests.m; sourceTree = "<group>"; };
+		70D2760113B66DB4008A644C /* Sequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sequencer.h; path = sequencer/Sequencer.h; sourceTree = "<group>"; };
+		70D2760213B66DB4008A644C /* Sequencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sequencer.m; path = sequencer/Sequencer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 		70D2760013B669C4008A644C /* Sequencer */ = {
 			isa = PBXGroup;
 			children = (
+				70D2760113B66DB4008A644C /* Sequencer.h */,
+				70D2760213B66DB4008A644C /* Sequencer.m */,
 			);
 			name = Sequencer;
 			sourceTree = "<group>";
@@ -199,6 +205,9 @@
 /* Begin PBXProject section */
 		70D275C013B66951008A644C /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = SFSoftwareist;
+			};
 			buildConfigurationList = 70D275C313B66951008A644C /* Build configuration list for PBXProject "Sequencer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -261,6 +270,7 @@
 			files = (
 				70D275DB13B66951008A644C /* main.m in Sources */,
 				70D275DE13B66951008A644C /* SequencerAppDelegate.m in Sources */,
+				70D2760313B66DB4008A644C /* Sequencer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D275F713B66951008A644C /* SequencerTests.m in Sources */,
+				70D2760413B66DB4008A644C /* Sequencer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +330,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -333,6 +345,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
