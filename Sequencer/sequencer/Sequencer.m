@@ -9,20 +9,26 @@
 #import "Sequencer.h"
 #import "SequencerEntry.h"
 
+@interface Sequencer ()
+- (void)checkForResolvedEntries;
+@end
+
 @implementation Sequencer
-@dynamic numUnresolvedDependencies;
+@dynamic numUnresolvedEntries;
 
 - (id)init
 {
 	if((self = [super init]))
 	{
-		entries_ = [[NSMutableSet alloc] init];
+		entries_ = [[NSMutableArray alloc] init];
+		resolvedDependencies_ = [[NSMutableSet alloc] init];
 	}
 	return self;
 }
 
 - (void)dealloc
 {
+	[resolvedDependencies_ release], resolvedDependencies_ = nil;
 	[entries_ release], entries_ = nil;
 	[super dealloc];
 }
@@ -40,9 +46,34 @@
 	SequencerEntry * newEntry = [[SequencerEntry alloc] initWithTarget:target action:action dependencies:dependencySet];
 	[entries_ addObject:newEntry];
 	[newEntry release];
+	[self checkForResolvedEntries];
 }
 
-- (int)numUnresolvedDependencies
+- (void)resolveDependency:(int)d
+{
+	NSNumber * dependency = [NSNumber numberWithInt:d];
+	if([resolvedDependencies_ containsObject:dependency])
+		return;
+	
+	[resolvedDependencies_ addObject:dependency];
+	[self checkForResolvedEntries];
+}
+
+- (void)checkForResolvedEntries
+{
+	NSMutableArray * executedEntries = [NSMutableArray arrayWithCapacity:entries_.count];
+	for (SequencerEntry * entry in entries_) {
+		if([entry.dependencies isSubsetOfSet:resolvedDependencies_])
+		{
+			//execute method and remove
+			[entry execute];
+			[executedEntries addObject:entry];
+		}
+	}
+	[entries_ removeObjectsInArray:executedEntries];
+}
+
+- (int)numUnresolvedEntries
 {
 	return entries_.count;
 }

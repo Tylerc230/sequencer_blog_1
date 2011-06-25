@@ -14,5 +14,8 @@
 	SEL action_;
 	NSSet * dependencies_;
 }
+@property (nonatomic, readonly) NSSet * dependencies;
+
 - (id)initWithTarget:(id)target action:(SEL)action dependencies:(NSSet*)dependencies;
+- (void)execute;
 @end

@@ -13,6 +13,7 @@
 @end
 
 @implementation SequencerEntry
+@synthesize dependencies = dependencies_;
 
 - (id)initWithTarget:(id)target action:(SEL)action dependencies:(NSSet*)dependencies
 {
@@ -23,6 +24,11 @@
 		dependencies_ = [[NSSet alloc] initWithSet:dependencies];
 	}
 	return self;
+}
+
+- (void)execute
+{
+	[target_ performSelector:action_];
 }
 
 - (void)dealloc

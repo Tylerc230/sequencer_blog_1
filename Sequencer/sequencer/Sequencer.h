@@ -10,10 +10,14 @@
 
 
 @interface Sequencer : NSObject {
-    NSMutableSet * entries_;
+    NSMutableArray	* entries_;
+	NSMutableSet	* resolvedDependencies_;
+	
 }
-@property (nonatomic, readonly) int numUnresolvedDependencies;
+@property (nonatomic, readonly) int numUnresolvedEntries;
 
-- (void)addTarget:(id)target action:(SEL)action dependencies:(int)dependancy1,... NS_REQUIRES_NIL_TERMINATION;
+//requires 0 termination
+- (void)addTarget:(id)target action:(SEL)action dependencies:(int)dependancy1,...;
+- (void)resolveDependency:(int)dependency;
 
 @end
