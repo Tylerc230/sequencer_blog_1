@@ -11,7 +11,8 @@
 
 @interface SequencerTests : SenTestCase {
 @private
-	Sequencer * sequencer_;    
+	Sequencer * sequencer_;
+	int executedMethodCount_[5];
 }
 
 @end

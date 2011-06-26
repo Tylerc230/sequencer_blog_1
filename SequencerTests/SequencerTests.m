@@ -16,10 +16,10 @@ typedef enum {
 	DS2,
 	DS3,
 	DS4,
-	DS5
+	DS5,
+	DSRecursive,
+	DSRecursive2
 }DependentSteps;
-
-static int executedMethods = 0;
 
 @implementation SequencerTests
 
@@ -27,7 +27,11 @@ static int executedMethods = 0;
 {
     [super setUp];
 	sequencer_ = [[Sequencer alloc] init];
-    executedMethods = 0;
+    executedMethodCount_[0] = 0;
+	executedMethodCount_[1] = 0;
+	executedMethodCount_[2] = 0;
+	executedMethodCount_[3] = 0;
+	executedMethodCount_[4] = 0;
     // Set-up code here.
 }
 
@@ -64,35 +68,61 @@ static int executedMethods = 0;
 {
 	[sequencer_ addTarget:self action:@selector(method1) dependencies:DS1, DSEnd];
 	[sequencer_ resolveDependency:DS1];
-	STAssertTrue(executedMethods & 1, @"Method not executed after dependency resolution");
+	STAssertTrue(executedMethodCount_[0] == 1, @"Method not executed after dependency resolution");
 }
 
 - (void)testImmediateExecution
 {
 	[sequencer_ addTarget:self action:@selector(method1) dependencies:DSEnd];
 	STAssertEquals(sequencer_.numUnresolvedEntries, 0, @"Method not removed after execution");
-	STAssertTrue(executedMethods & 1, @"Method not executed immediately");
+	STAssertTrue(executedMethodCount_[0] == 1, @"Method not executed immediately");
+}
+
+- (void)testPostAdditionDependencyResolution
+{
+	[sequencer_ resolveDependency:DS1];
+	[sequencer_ addTarget:self action:@selector(method1) dependencies:DS1, DSEnd];
+	STAssertTrue(executedMethodCount_[0] == 1, @"Failed to execute method for previously resolved dependency");
 }
 
 - (void)testRecursiveDependencyResolution
 {
+	[sequencer_ addTarget:self action:@selector(methodWithResolution) dependencies:DS1, DSEnd];
+	[sequencer_ addTarget:self action:@selector(methodWithResolution2) dependencies:DSRecursive];
+	[sequencer_ addTarget:self action:@selector(method1) dependencies:DSRecursive2, DSEnd];
+	[sequencer_ resolveDependency:DS1];
+	STAssertTrue(executedMethodCount_[4] == 1, @"Failed to execute 2nd dependent method");
+	STAssertTrue(executedMethodCount_[0] == 1, @"Failed to execute dependent method");
+	STAssertTrue(executedMethodCount_[3] == 1, @"Failed to execute initial method");
 	
 }
 
 #pragma dependent methods
 - (void)method1
 {
-	executedMethods |= 1;
+	executedMethodCount_[0]++;
 }
 
 - (void)method2
 {
-	executedMethods |= (1 << 1);
+	executedMethodCount_[1]++;
 }
 
 - (void)method3
 {
-	executedMethods |= (1 << 2);
+	executedMethodCount_[2]++;
+}
+
+- (void)methodWithResolution
+{
+	executedMethodCount_[3]++;
+	[sequencer_ resolveDependency:DSRecursive];
+}
+
+- (void)methodWithResolution2
+{
+	executedMethodCount_[4]++;
+	[sequencer_ resolveDependency:DSRecursive2];
 }
 
 @end

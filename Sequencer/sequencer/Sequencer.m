@@ -61,16 +61,24 @@
 
 - (void)checkForResolvedEntries
 {
-	NSMutableArray * executedEntries = [NSMutableArray arrayWithCapacity:entries_.count];
+	NSMutableArray * resolvedEntries = [NSMutableArray arrayWithCapacity:entries_.count];
+	//determine which entries can be executed and removed
 	for (SequencerEntry * entry in entries_) {
 		if([entry.dependencies isSubsetOfSet:resolvedDependencies_])
 		{
-			//execute method and remove
-			[entry execute];
-			[executedEntries addObject:entry];
+			[resolvedEntries addObject:entry];
 		}
 	}
-	[entries_ removeObjectsInArray:executedEntries];
+	//remove from the list of entries that still need resolving
+	[entries_ removeObjectsInArray:resolvedEntries];
+	//execute resolution (execute could potentially call checkForResolvedEntries recursively)
+	for(SequencerEntry * entry in resolvedEntries)
+	{
+		//execute method and remove
+		[entry execute];		
+	}
+
+
 }
 
 - (int)numUnresolvedEntries
